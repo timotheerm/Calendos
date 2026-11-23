@@ -1,0 +1,14 @@
+# Systemfiler
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+
+# Python / Flask (til senere)
+__pycache__/
+*.pyc
+venv/
+.env

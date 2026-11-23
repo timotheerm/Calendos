@@ -1,0 +1,27 @@
+/* anbefalinger.css – kun til anbefalinger.html */
+
+.gitter { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+
+.event-kort {
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: var(--radius);
+  box-shadow: var(--skygge);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.event-kort h3 { margin: 8px 0 4px; font-size: 1.05rem; }
+.event-kort .knap { margin-top: auto; }
+
+.kategori {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--primaer-lys);
+  color: var(--primaer);
+}
+.meta { margin: 0 0 6px; color: var(--tekst-svag); font-size: 0.9rem; }
+.match { margin: 0 0 12px; color: var(--accent); font-size: 0.85rem; font-weight: 600; }

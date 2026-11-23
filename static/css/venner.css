@@ -1,0 +1,24 @@
+/* venner.css – kun til venner.html */
+
+#soeg-ven { margin-bottom: 12px; }
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--kant);
+}
+.person:last-child { border-bottom: none; }
+.person .navn { flex: 1; }
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--primaer);
+  color: #fff;
+  font-weight: 700;
+}

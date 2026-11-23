@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupper · Calendos</title>
+  <!-- Fælles stil for alle sider -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- Stil kun for denne side -->
+  <link rel="stylesheet" href="static/css/grupper.css">
+</head>
+<body>
+  <!-- ===== Topmenu (samme på alle sider) ===== -->
+  <header class="topbar">
+    <a href="index.html" class="logo">Calendos</a>
+    <nav class="menu">
+      <a href="index.html">Min kalender</a>
+      <a href="anbefalinger.html">Anbefalinger</a>
+      <a href="venner.html">Venner</a>
+      <a href="grupper.html" class="aktiv">Grupper</a>
+    </nav>
+  </header>
+
+  <main class="indhold">
+    <section class="side-top">
+      <h1>Grupper</h1>
+      <p class="undertekst">Find et tidspunkt hvor alle i gruppen har fri.</p>
+    </section>
+
+    <div class="to-kolonner bred">
+      <!-- Vælg gruppe og medlemmer. TODO (JS): hent venner og lav en gruppe -->
+      <section class="kort">
+        <h2>Ny gruppe</h2>
+        <label for="gruppe-navn">Gruppenavn</label>
+        <input type="text" id="gruppe-navn" placeholder="Fx Fredagsbar-holdet">
+        <h3>Medlemmer</h3>
+        <div id="medlemmer" class="tags">
+          <label class="tag"><input type="checkbox" value="emil"> Eksempel: Emil</label>
+        </div>
+        <button id="find-tid" class="knap">Find fælles fritid</button>
+      </section>
+
+      <!-- Resultat. TODO (JS): marker de timer hvor ALLE er ledige -->
+      <section class="kort">
+        <h2>Ledige tidspunkter</h2>
+        <table id="ledig-tabel" class="ledig-tabel">
+          <thead>
+            <tr><th></th><th>Man</th><th>Tir</th><th>Ons</th><th>Tor</th><th>Fre</th><th>Lør</th><th>Søn</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>10–12</th><td></td><td></td><td></td><td></td><td></td><td class="ledig"></td><td class="ledig"></td></tr>
+            <tr><th>12–14</th><td></td><td></td><td></td><td></td><td></td><td class="ledig"></td><td></td></tr>
+            <tr><th>14–16</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><th>16–18</th><td></td><td class="ledig"></td><td></td><td></td><td class="ledig"></td><td></td><td></td></tr>
+            <tr><th>18–20</th><td class="ledig"></td><td></td><td></td><td class="ledig"></td><td class="ledig"></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        <p class="forklaring"><span class="prik ledig"></span> = alle har fri</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bund">
+    <p>Calendos · Grundlæggende datalogi 2026</p>
+  </footer>
+
+  <!-- JavaScript: data.js først (fælles datafunktioner), derefter sidens egen fil -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/grupper.js"></script>
+</body>
+</html>

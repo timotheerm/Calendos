@@ -1,0 +1,20 @@
+[
+  {
+    "id": "emil",
+    "navn": "Emil",
+    "interesser": ["musik", "sport"],
+    "events": [1, 2]
+  },
+  {
+    "id": "sara",
+    "navn": "Sara",
+    "interesser": ["musik", "kunst"],
+    "events": [1]
+  },
+  {
+    "id": "jonas",
+    "navn": "Jonas",
+    "interesser": ["mad", "film"],
+    "events": [3]
+  }
+]

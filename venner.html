@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venner · Calendos</title>
+  <!-- Fælles stil for alle sider -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- Stil kun for denne side -->
+  <link rel="stylesheet" href="static/css/venner.css">
+</head>
+<body>
+  <!-- ===== Topmenu (samme på alle sider) ===== -->
+  <header class="topbar">
+    <a href="index.html" class="logo">Calendos</a>
+    <nav class="menu">
+      <a href="index.html">Min kalender</a>
+      <a href="anbefalinger.html">Anbefalinger</a>
+      <a href="venner.html" class="aktiv">Venner</a>
+      <a href="grupper.html">Grupper</a>
+    </nav>
+  </header>
+
+  <main class="indhold">
+    <section class="side-top">
+      <h1>Venner</h1>
+      <p class="undertekst">Følg andres kalendere og se, hvad I har til fælles.</p>
+    </section>
+
+    <div class="to-kolonner bred">
+      <!-- Venneliste. TODO (JS): lav listen ud fra data/users.json -->
+      <section class="kort">
+        <h2>Jeg følger</h2>
+        <input type="search" id="soeg-ven" placeholder="Søg efter en ven ...">
+        <ul id="venne-liste" class="liste">
+          <li class="person">
+            <span class="avatar">E</span>
+            <span class="navn">Eksempel: Emil</span>
+            <button class="knap knap-lys">Vis kalender</button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Fælles. TODO (JS): vis events og interesser, som du og vennen begge har -->
+      <section class="kort">
+        <h2>Fælles med <span id="valgt-ven">...</span></h2>
+        <h3>Samme events</h3>
+        <ul id="faelles-events" class="liste"></ul>
+        <h3>Samme interesser</h3>
+        <div id="faelles-interesser" class="tags"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bund">
+    <p>Calendos · Grundlæggende datalogi 2026</p>
+  </footer>
+
+  <!-- JavaScript: data.js først (fælles datafunktioner), derefter sidens egen fil -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/venner.js"></script>
+</body>
+</html>

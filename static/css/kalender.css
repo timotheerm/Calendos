@@ -1,0 +1,34 @@
+/* kalender.css – kun til index.html (Min kalender) */
+
+.uge-styring { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+#uge-titel { font-weight: 600; min-width: 70px; text-align: center; }
+
+.kalender-layout { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
+
+.uge { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.dag {
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: var(--radius);
+  min-height: 260px;
+  padding: 10px;
+}
+.dag h3 { margin: 0 0 8px; font-size: 0.9rem; color: var(--tekst-svag); text-align: center; }
+.dag-events { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+
+/* Et event i kalenderen */
+.event {
+  background: var(--primaer-lys);
+  border-left: 3px solid var(--primaer);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 0.8rem;
+}
+/* Event som en ven også skal til */
+.event-faelles { background: #fef3c7; border-left-color: var(--accent); }
+
+@media (max-width: 900px) {
+  .kalender-layout { grid-template-columns: 1fr; }
+  .uge { grid-template-columns: repeat(2, 1fr); }
+  .dag { min-height: 120px; }
+}

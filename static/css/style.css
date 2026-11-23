@@ -1,0 +1,141 @@
+/* =========================================================
+   style.css – FÆLLES stil for alle sider
+   Farver og størrelser står som variabler her øverst,
+   så hele siden kan skifte udseende ét sted.
+   ========================================================= */
+
+:root {
+  --primaer: #4f46e5;        /* hovedfarve (knapper, links) */
+  --primaer-lys: #eef2ff;    /* lys baggrund til aktive ting */
+  --accent: #f59e0b;         /* fremhævning, fx fælles events */
+  --ledig: #22c55e;          /* grøn = ledig tid */
+  --tekst: #1f2937;
+  --tekst-svag: #6b7280;
+  --baggrund: #f6f7fb;
+  --kort: #ffffff;
+  --kant: #e5e7eb;
+  --radius: 12px;
+  --skygge: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--tekst);
+  background: var(--baggrund);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Topmenu ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 24px;
+  background: var(--kort);
+  border-bottom: 1px solid var(--kant);
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primaer);
+  text-decoration: none;
+}
+.menu { display: flex; gap: 6px; flex-wrap: wrap; }
+.menu a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--tekst);
+  text-decoration: none;
+}
+.menu a:hover { background: var(--baggrund); }
+.menu a.aktiv { background: var(--primaer-lys); color: var(--primaer); font-weight: 600; }
+
+/* ---------- Sideindhold ---------- */
+.indhold {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.side-top { margin-bottom: 20px; }
+.side-top h1 { margin: 0 0 4px; }
+.undertekst { margin: 0; color: var(--tekst-svag); }
+
+/* ---------- Kort (hvid boks) ---------- */
+.kort {
+  background: var(--kort);
+  border: 1px solid var(--kant);
+  border-radius: var(--radius);
+  box-shadow: var(--skygge);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.kort h2 { margin-top: 0; font-size: 1.15rem; }
+.kort h3 { font-size: 0.95rem; color: var(--tekst-svag); margin: 16px 0 8px; }
+
+/* ---------- Formularer ---------- */
+label { display: block; font-size: 0.9rem; margin: 12px 0 4px; }
+input[type="text"], input[type="search"], input[type="date"], input[type="time"], select {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--kant);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+input:focus, select:focus { outline: 2px solid var(--primaer); outline-offset: 1px; }
+
+/* ---------- Knapper ---------- */
+.knap {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primaer);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.knap:hover { filter: brightness(1.1); }
+.knap-lys { background: var(--primaer-lys); color: var(--primaer); margin-top: 0; }
+
+/* ---------- Tags (interesser) ---------- */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 12px;
+  border: 1px solid var(--kant);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.tag:has(input:checked) { background: var(--primaer-lys); border-color: var(--primaer); }
+
+/* ---------- Lister ---------- */
+.liste { list-style: none; padding: 0; margin: 0; }
+
+/* ---------- Layout-hjælpere ---------- */
+.to-kolonner { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.to-kolonner > * { min-width: 0; }
+.to-kolonner.bred { gap: 20px; align-items: start; }
+
+/* ---------- Bund ---------- */
+.bund { text-align: center; color: var(--tekst-svag); font-size: 0.85rem; padding: 16px; }
+
+/* ---------- Mobil ---------- */
+@media (max-width: 700px) {
+  .to-kolonner.bred { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min kalender · Calendos</title>
+  <!-- Fælles stil for alle sider -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- Stil kun for denne side -->
+  <link rel="stylesheet" href="static/css/kalender.css">
+</head>
+<body>
+  <!-- ===== Topmenu (samme på alle sider) ===== -->
+  <header class="topbar">
+    <a href="index.html" class="logo">Calendos</a>
+    <nav class="menu">
+      <a href="index.html" class="aktiv">Min kalender</a>
+      <a href="anbefalinger.html">Anbefalinger</a>
+      <a href="venner.html">Venner</a>
+      <a href="grupper.html">Grupper</a>
+    </nav>
+  </header>
+
+  <main class="indhold">
+    <section class="side-top">
+      <h1>Min kalender</h1>
+      <div class="uge-styring">
+        <!-- TODO (JS): knapperne skal skifte uge -->
+        <button id="forrige-uge" class="knap knap-lys">&larr; Forrige</button>
+        <span id="uge-titel">Uge 48</span>
+        <button id="naeste-uge" class="knap knap-lys">Næste &rarr;</button>
+      </div>
+    </section>
+
+    <div class="kalender-layout">
+      <!-- Ugeoversigt: 7 dage. TODO (JS): fyld events ind i hver .dag-events -->
+      <section id="uge" class="uge">
+        <div class="dag"><h3>Man</h3><ul class="dag-events"><li class="event">Eksempel: Forelæsning 10:00</li></ul></div>
+        <div class="dag"><h3>Tir</h3><ul class="dag-events"></ul></div>
+        <div class="dag"><h3>Ons</h3><ul class="dag-events"></ul></div>
+        <div class="dag"><h3>Tor</h3><ul class="dag-events"></ul></div>
+        <div class="dag"><h3>Fre</h3><ul class="dag-events"><li class="event event-faelles">Eksempel: Koncert 20:00</li></ul></div>
+        <div class="dag"><h3>Lør</h3><ul class="dag-events"></ul></div>
+        <div class="dag"><h3>Søn</h3><ul class="dag-events"></ul></div>
+      </section>
+
+      <!-- Formular til at tilføje et event. TODO (JS): gem eventet når der trykkes -->
+      <aside class="kort">
+        <h2>Tilføj event</h2>
+        <form id="nyt-event-form">
+          <label for="event-titel">Titel</label>
+          <input type="text" id="event-titel" placeholder="Fx Fodbold med Emil" required>
+
+          <label for="event-dato">Dato</label>
+          <input type="date" id="event-dato" required>
+
+          <div class="to-kolonner">
+            <div>
+              <label for="event-start">Start</label>
+              <input type="time" id="event-start">
+            </div>
+            <div>
+              <label for="event-slut">Slut</label>
+              <input type="time" id="event-slut">
+            </div>
+          </div>
+
+          <label for="event-kategori">Kategori</label>
+          <select id="event-kategori">
+            <option value="studie">Studie</option>
+            <option value="musik">Musik</option>
+            <option value="sport">Sport</option>
+            <option value="socialt">Socialt</option>
+            <option value="andet">Andet</option>
+          </select>
+
+          <button type="submit" class="knap">Tilføj</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="bund">
+    <p>Calendos · Grundlæggende datalogi 2026</p>
+  </footer>
+
+  <!-- JavaScript: data.js først (fælles datafunktioner), derefter sidens egen fil -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/kalender.js"></script>
+</body>
+</html>

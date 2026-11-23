@@ -1,0 +1,12 @@
+/* grupper.css – kun til grupper.html */
+
+.ledig-tabel { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.ledig-tabel th { font-weight: 600; color: var(--tekst-svag); padding: 6px; }
+.ledig-tabel td { border: 1px solid var(--kant); height: 32px; }
+
+/* En celle hvor alle i gruppen har fri */
+.ledig-tabel td.ledig { background: var(--ledig); }
+
+.forklaring { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--tekst-svag); }
+.prik { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.prik.ledig { background: var(--ledig); }

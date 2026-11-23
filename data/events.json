@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "titel": "The Weeknd – koncert",
+    "kategori": "musik",
+    "sted": "Royal Arena",
+    "dato": "2026-12-05",
+    "start": "20:00",
+    "slut": "23:00"
+  },
+  {
+    "id": 2,
+    "titel": "FCK – Brøndby",
+    "kategori": "sport",
+    "sted": "Parken",
+    "dato": "2026-12-06",
+    "start": "16:00",
+    "slut": "18:00"
+  },
+  {
+    "id": 3,
+    "titel": "Julemarked i Tivoli",
+    "kategori": "mad",
+    "sted": "Tivoli",
+    "dato": "2026-12-07",
+    "start": "12:00",
+    "slut": "17:00"
+  }
+]

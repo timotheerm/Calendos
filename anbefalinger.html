@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anbefalinger · Calendos</title>
+  <!-- Fælles stil for alle sider -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- Stil kun for denne side -->
+  <link rel="stylesheet" href="static/css/anbefalinger.css">
+</head>
+<body>
+  <!-- ===== Topmenu (samme på alle sider) ===== -->
+  <header class="topbar">
+    <a href="index.html" class="logo">Calendos</a>
+    <nav class="menu">
+      <a href="index.html">Min kalender</a>
+      <a href="anbefalinger.html" class="aktiv">Anbefalinger</a>
+      <a href="venner.html">Venner</a>
+      <a href="grupper.html">Grupper</a>
+    </nav>
+  </header>
+
+  <main class="indhold">
+    <section class="side-top">
+      <h1>Anbefalinger til dig</h1>
+      <p class="undertekst">Events valgt ud fra dine interesser.</p>
+    </section>
+
+    <!-- Interesser. TODO (JS): gem valgte interesser og brug dem til at sortere events -->
+    <section class="kort">
+      <h2>Mine interesser</h2>
+      <div id="interesser" class="tags">
+        <label class="tag"><input type="checkbox" value="musik"> Musik</label>
+        <label class="tag"><input type="checkbox" value="sport"> Sport</label>
+        <label class="tag"><input type="checkbox" value="kunst"> Kunst</label>
+        <label class="tag"><input type="checkbox" value="mad"> Mad</label>
+        <label class="tag"><input type="checkbox" value="teknologi"> Teknologi</label>
+        <label class="tag"><input type="checkbox" value="film"> Film</label>
+      </div>
+    </section>
+
+    <!-- Liste med anbefalede events. TODO (JS): lav kortene ud fra data/events.json -->
+    <section id="anbefalet-liste" class="gitter">
+      <article class="event-kort">
+        <span class="kategori">Musik</span>
+        <h3>Eksempel: The Weeknd – koncert</h3>
+        <p class="meta">Royal Arena · Lør 20:00</p>
+        <p class="match">2 venner skal også med</p>
+        <button class="knap">Tilføj til kalender</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bund">
+    <p>Calendos · Grundlæggende datalogi 2026</p>
+  </footer>
+
+  <!-- JavaScript: data.js først (fælles datafunktioner), derefter sidens egen fil -->
+  <script src="static/js/data.js"></script>
+  <script src="static/js/anbefalinger.js"></script>
+</body>
+</html>
