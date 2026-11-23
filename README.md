@@ -36,16 +36,17 @@ calendos/
     └── users.json        Eksempel-brugere (venner)
 ```
 
-**Hver side har sin egen `.css`- og `.js`-fil.** Så kan vi arbejde samtidig uden at ødelægge hinandens kode. Ændringer i `style.css` og `data.js` påvirker alle sider, så sige til før I ændrer dem.
+**Hver side har sin egen `.css`- og `.js`-fil.** Så kan vi arbejde samtidig uden at ødelægge hinandens kode. Ændringer i `style.css` og `data.js` påvirker alle sider, så snak sammen før I ændrer dem.
 
 ---
 
 ## Kom i gang (første gang)
 
-1. **Lav en GitHub-konto** på [github.com](https://github.com) og send dit brugernavn til mig "Timothée", så du kan blive tilføjet til repoet.
+1. **Lav en GitHub-konto** på [github.com](https://github.com) og send dit brugernavn til Timothée, så du kan blive tilføjet til repoet.
 2. **Acceptér invitationen** fra GitHub (den kommer på mail).
-3. **Install programme:**
+3. **Installér programmerne:**
    - [GitHub Desktop](https://desktop.github.com)
+   - [Visual Studio Code](https://code.visualstudio.com)
 4. **Hent projektet:** Åbn GitHub Desktop → *File → Clone repository* → vælg `calendos` → *Clone*.
 5. **Åbn i VS Code:** I GitHub Desktop, tryk *Open in Visual Studio Code*.
 6. **Installér to udvidelser i VS Code:** tryk Ctrl+Shift+X, søg efter **Live Server** og **Live Share**, og tryk *Install* på begge.
@@ -60,7 +61,7 @@ Højreklik på `index.html` i VS Code → **Open with Live Server**. Siden åbne
 
 ## Sådan arbejder vi hver dag
 
-1. **Før i starter:** I GitHub Desktop, tryk **Fetch origin** og derefter **Pull origin**. Så har du de andres nyeste ændringer. (Skal jeg nok forklar i dybt.)
+1. **Før du starter:** I GitHub Desktop, tryk **Fetch origin** og derefter **Pull origin**. Så har du de andres nyeste ændringer.
 2. **Kod** i dine egne filer.
 3. **Når du er færdig** (eller stopper for i dag):
    - Skriv en kort besked nederst til venstre i GitHub Desktop, fx `Tilføjet formular til nyt event`.
@@ -86,7 +87,7 @@ Indtil videre ligger al data lokalt:
 
 Al kode der henter eller gemmer data skal ligge i `static/js/data.js`.
 
-## Senere: måske online
+## Senere: online med Flask
 
 I skal ikke tænkt på static og templates ect.
 
@@ -94,7 +95,7 @@ I skal ikke tænkt på static og templates ect.
 
 ## Gruppe
 
-- Ida
-- Olivia
-- Alberte
 - Timothée
+- _navn_
+- _navn_
+- _navn_
