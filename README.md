@@ -94,7 +94,7 @@ I skal ikke tænkt på static og templates ect.
 
 ## Gruppe
 
-- Timothée
-- Alberte
-- Olivia
 - Ida
+- Olivia
+- Alberte
+- Timothée
