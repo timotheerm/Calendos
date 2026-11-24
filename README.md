@@ -145,4 +145,4 @@ I skal ikke tænke på `static/`, `templates/` osv. Det tager jeg mig af, hvis s
 - Ida Carolina Kronholm
 - Olivia Lundberg
 - Alberte Birkholm
-- Timothée Resen Métais
+- Timothée
